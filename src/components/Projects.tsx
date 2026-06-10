@@ -1,7 +1,7 @@
 "use client";
-
+ 
 import React from "react";
-import { Cpu, Eye, CloudRain, ShieldCheck, Tag } from "lucide-react";
+import { Cpu, Eye, CloudRain, ShieldCheck, Tag, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface ProjectItem {
@@ -13,7 +13,15 @@ interface ProjectItem {
   tech: string[];
   icon: React.ReactNode;
   mockup: React.ReactNode;
+  github?: string;
+  demo?: string;
 }
+
+const GithubIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+  </svg>
+);
 
 export default function Projects() {
   const projects: ProjectItem[] = [
@@ -25,6 +33,7 @@ export default function Projects() {
       features: ["Real-Time Object Detection", "Color Recognition", "Voice Output System", "Accessibility Focused"],
       tech: ["Python", "OpenCV", "Machine Learning"],
       icon: <Eye className="h-5 w-5 text-primary" />,
+      github: "https://github.com/ITMohanraj/Object-Detection",
       mockup: (
         <div className="w-full h-48 bg-neutral-900 rounded-xl relative border border-white/10 overflow-hidden flex flex-col justify-between p-3 font-mono text-[10px] text-green-400">
           {/* Camera overlay */}
@@ -74,6 +83,7 @@ export default function Projects() {
       features: ["Soil Moisture Monitoring", "Automatic Irrigation Control", "Smart Water Management", "Microcontroller Interfacing"],
       tech: ["ESP32", "Arduino", "Embedded C"],
       icon: <Cpu className="h-5 w-5 text-primary" />,
+      github: "https://github.com/ITMohanraj",
       mockup: (
         <div className="w-full h-48 bg-neutral-900 rounded-xl relative border border-white/10 p-4 font-mono text-xs text-slate-300 flex flex-col justify-between">
           {/* Dashboard Header */}
@@ -112,6 +122,8 @@ export default function Projects() {
       features: ["Weather Forecasting", "Real-Time API Data", "Interactive Climate Graphics"],
       tech: ["HTML5", "CSS3", "JavaScript"],
       icon: <CloudRain className="h-5 w-5 text-primary" />,
+      github: "https://github.com/ITMohanraj/Weather-Application",
+      demo: "https://padix-flask.vercel.app",
       mockup: (
         <div className="w-full h-48 bg-gradient-to-br from-indigo-900 via-slate-900 to-neutral-900 rounded-xl relative border border-white/10 p-4 text-white flex flex-col justify-between">
           {/* Current weather card */}
@@ -188,7 +200,7 @@ export default function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 rounded-2xl glass-panel border border-border glow-card glow-border items-center`}
+                className="grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 rounded-2xl glass-panel border border-border glow-card glow-border items-center"
               >
                 {/* Left Side: Mockups */}
                 <div className={`lg:col-span-5 ${isReverse ? "lg:order-last" : ""}`}>
@@ -239,6 +251,32 @@ export default function Projects() {
                         <span>{t}</span>
                       </div>
                     ))}
+                  </div>
+
+                  {/* Action Links */}
+                  <div className="flex flex-wrap gap-3 pt-4 border-t border-border/40">
+                    {proj.github && (
+                      <a
+                        href={proj.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 rounded-lg border border-primary text-primary hover:bg-primary/10 text-xs font-semibold transition-all duration-300 flex items-center space-x-1.5 cursor-pointer"
+                      >
+                        <GithubIcon className="h-3.5 w-3.5" />
+                        <span>GitHub Repo</span>
+                      </a>
+                    )}
+                    {proj.demo && (
+                      <a
+                        href={proj.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 rounded-lg bg-primary hover:bg-[#E04F1A] text-white text-xs font-semibold transition-all duration-300 shadow-md shadow-primary/20 hover:shadow-lg flex items-center space-x-1.5 cursor-pointer"
+                      >
+                        <span>Live Demo</span>
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>
