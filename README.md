@@ -2,7 +2,7 @@
 
 Welcome to the official repository of my personal portfolio. This website showcases my projects, technical skills, academic standings, and professional experience as an aspiring AI Engineer, Software Developer, and SAP Enthusiast.
 
-🌐 **Live Demo:** [ITMohanraj Portfolio](https://mohanraj-portfolio.vercel.app) *(or your deployed live URL)*
+🌐 **Live Demo:** [ITMohanraj Portfolio](https://mohanraj-portfolio-two.vercel.app)
 
 ---
 
