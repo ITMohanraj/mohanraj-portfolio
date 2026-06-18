@@ -34,6 +34,7 @@ export default function Projects() {
       tech: ["Python", "OpenCV", "Machine Learning"],
       icon: <Eye className="h-5 w-5 text-primary" />,
       github: "https://github.com/ITMohanraj/Object-Detection",
+      demo: "https://realtime-object-detection-tqwo.onrender.com",
       mockup: (
         <div className="w-full h-48 bg-neutral-900 rounded-xl relative border border-white/10 overflow-hidden flex flex-col justify-between p-3 font-mono text-[10px] text-green-400">
           {/* Camera overlay */}
@@ -123,7 +124,7 @@ export default function Projects() {
       tech: ["HTML5", "CSS3", "JavaScript"],
       icon: <CloudRain className="h-5 w-5 text-primary" />,
       github: "https://github.com/ITMohanraj/Weather-Application",
-      demo: "https://padix-flask.vercel.app",
+      demo: "https://padix-flask.vercel.app/",
       mockup: (
         <div className="w-full h-48 bg-gradient-to-br from-indigo-900 via-slate-900 to-neutral-900 rounded-xl relative border border-white/10 p-4 text-white flex flex-col justify-between">
           {/* Current weather card */}

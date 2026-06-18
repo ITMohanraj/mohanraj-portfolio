@@ -45,6 +45,7 @@ I am a **B.Tech Information Technology** student at **Nandha College of Technolo
 * **Category:** AI & Computer Vision
 * **Technologies:** Python, OpenCV, Machine Learning (YOLO)
 * **Description:** An assistive real-time computer vision system built to detect object classes, label environmental colors, and stream descriptive voice feedback for visually impaired users.
+* **Live Demo:** [realtime-object-detection-tqwo.onrender.com](https://realtime-object-detection-tqwo.onrender.com)
 * **Key Features:**
   * Real-Time Object Detection
   * Color Recognition
@@ -63,6 +64,7 @@ I am a **B.Tech Information Technology** student at **Nandha College of Technolo
 * **Category:** Web Development
 * **Technologies:** HTML5, CSS3, JavaScript, Weather API
 * **Description:** A highly responsive meteorological forecast platform utilizing open API integrations to render live climate datasets and historical trends in high-fidelity graphics.
+* **Live Demo:** [padix-flask.vercel.app](https://padix-flask.vercel.app/)
 * **Key Features:**
   * Real-Time Weather Forecasting
   * Multi-city Search & Live API Integration
