@@ -126,4 +126,4 @@ This project is optimized for deployment on the **Vercel Platform**.
 
 ---
 
-✉️ **Contact:** Feel free to connect with me at [mohanraj.kulanthaivel.edu@gmail.com](mailto:mohanraj.kulanthaivel.edu@gmail.com) or via the Contact Section on my portfolio!
+✉️ **Contact:** Feel free to connect with me at [mohanraj.k1110@gmail.com](mailto:mohanraj.k1110@gmail.com) or via the Contact Section on my portfolio!
